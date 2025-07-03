@@ -46,7 +46,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
             {/* App logo and name */}
             <div className="flex items-center justify-center lg:justify-start mb-6 lg:mb-8 gap-3 lg:gap-4">
               <img
-                src="https://storage.cloud.google.com/landingpage_storage/apple_touch_icon.png"
+                src="https://storage.googleapis.com/landingpage_storage/apple_touch_icon.png"
                 alt="StormSense Logo"
                 width="48"
                 height="48"
@@ -151,7 +151,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
           {/* Second column - App Image */}
           <div className="h-full flex items-start justify-start lg:justify-end lg:items-center lg:p-0">
             <img
-              src="https://storage.cloud.google.com/landingpage_storage/StormSense%20Landing%20Page%20Screenshots.png"
+              src="https://storage.googleapis.com/landingpage_storage/StormSense%20Landing%20Page%20Screenshots.png"
               alt="StormSense App Screenshots"
               className="w-full max-w-sm lg:max-w-none lg:w-full lg:h-full object-contain lg:object-cover"
             />

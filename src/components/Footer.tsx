@@ -40,7 +40,7 @@ const Footer = ({
               }}
             >
               <img
-                src="https://storage.cloud.google.com/landingpage_storage/apple_touch_icon.png"
+                src="https://storage.googleapis.com/landingpage_storage/apple_touch_icon.png"
                 alt="StormSense Logo"
                 width="32"
                 height="32"

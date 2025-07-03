@@ -24,7 +24,7 @@ const AppDownloadSection = ({ id = "download" }: AppDownloadSectionProps) => {
           >
             <div className="flex justify-center">
               <img
-                src="https://storage.cloud.google.com/landingpage_storage/StormSense_Country_View.png"
+                src="https://storage.googleapis.com/landingpage_storage/StormSense_Country_View.png"
                 alt="StormSense App on Phone"
                 className="rounded-2xl shadow-2xl max-w-md lg:max-w-lg"
               />

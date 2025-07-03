@@ -76,35 +76,35 @@ const FeatureShowcase = ({ features = [] }: FeatureShowcaseProps) => {
       title: "Hyperlocal Forecasts",
       description:
         "Get precise storm predictions for your exact location, not just your city.",
-      imageUrl: "https://storage.cloud.google.com/landingpage_storage/1.png",
+      imageUrl: "https://storage.googleapis.com/landingpage_storage/1.png",
     },
     {
       icon: <MapIcon className="h-7 w-7 text-blue-300" />,
       title: "Live Radar Map",
       description:
         "Watch storms develop in real-time with our advanced radar technology.",
-      imageUrl: "https://storage.cloud.google.com/landingpage_storage/2.png",
+      imageUrl: "https://storage.googleapis.com/landingpage_storage/2.png",
     },
     {
       icon: <UsersIcon className="h-7 w-7 text-blue-300" />,
       title: "Community Reports",
       description:
         "See and share real-time conditions and impacts from people in your area.",
-      imageUrl: "https://storage.cloud.google.com/landingpage_storage/3.png",
+      imageUrl: "https://storage.googleapis.com/landingpage_storage/3.png",
     },
     {
       icon: <MapPinIcon className="h-7 w-7 text-blue-300" />,
       title: "Alerts & Monitoring",
       description:
         "Save and receive alerts on whatever locations that matter to you.",
-      imageUrl: "https://storage.cloud.google.com/landingpage_storage/4.png",
+      imageUrl: "https://storage.googleapis.com/landingpage_storage/4.png",
     },
     {
       icon: <ShieldCheckIcon className="h-7 w-7 text-blue-300" />,
       title: "Safety from the Source",
       description:
         "View all information issued by the National Weather Service.",
-      imageUrl: "https://storage.cloud.google.com/landingpage_storage/5.png",
+      imageUrl: "https://storage.googleapis.com/landingpage_storage/5.png",
     },
   ];
 
