@@ -104,6 +104,24 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
                   </span>
                 </div>
               </button>
+
+              <button
+                className="bg-black hover:bg-gray-800 text-white px-2 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors duration-200 shadow-lg flex-1 max-w-[140px]"
+                onClick={() => window.open("https://stormsense.ai", "_blank")}
+              >
+                <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
+                  <img
+                    src="https://storage.googleapis.com/landingpage_storage/noun-1440734-FFFFFF.png"
+                    alt="Web App Icon"
+                    className="w-3 h-3"
+                  />
+                </div>
+                <div className="flex flex-col items-start text-left">
+                  <span className="text-xs font-normal leading-tight">
+                    Web App
+                  </span>
+                </div>
+              </button>
             </div>
 
             {/* Desktop buttons - original size */}
@@ -142,6 +160,27 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
                   </span>
                   <span className="text-sm font-semibold leading-tight">
                     Google Play
+                  </span>
+                </div>
+              </button>
+
+              <button
+                className="bg-black hover:bg-gray-800 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-3 transition-colors duration-200 shadow-lg w-48 sm:w-auto"
+                onClick={() => window.open("https://stormsense.ai", "_blank")}
+              >
+                <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+                  <img
+                    src="https://storage.googleapis.com/landingpage_storage/noun-1440734-FFFFFF.png"
+                    alt="Web App Icon"
+                    className="w-5 h-5"
+                  />
+                </div>
+                <div className="flex flex-col items-start text-left">
+                  <span className="text-xs font-normal leading-tight">
+                    View the
+                  </span>
+                  <span className="text-sm font-semibold leading-tight">
+                    Web App
                   </span>
                 </div>
               </button>

@@ -51,7 +51,15 @@ const Footer = ({
               </h2>
             </a>
 
-            <div className="flex items-center gap-4 text-sm">
+            <div className="flex flex-col items-center md:items-start gap-2 text-sm">
+              <a
+                href="https://stormsense.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-300 transition-colors"
+              >
+                StormSense Web App
+              </a>
               <a
                 href="https://github.com/orgs/StormSenseWeather/discussions/categories/ideas"
                 target="_blank"
