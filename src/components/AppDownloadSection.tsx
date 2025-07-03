@@ -10,7 +10,7 @@ const AppDownloadSection = ({ id = "download" }: AppDownloadSectionProps) => {
   return (
     <section
       id={id}
-      className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-slate-50 to-slate-100 w-full"
+      className="pt-0 pb-20 px-4 md:px-8 lg:px-16 lg:py-20 bg-gradient-to-b from-slate-50 to-slate-100 w-full"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
