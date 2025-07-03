@@ -1,20 +1,58 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 interface HeroSectionProps {
   onScrollToDownload?: () => void;
 }
 
 const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleUserInteraction = () => {
+      video.play().catch((err) => {
+        console.log("Video play failed:", err);
+        // Show fallback on play failure
+        const fallback = video.parentElement?.querySelector(".video-fallback");
+        if (fallback) {
+          (fallback as HTMLElement).style.display = "block";
+          video.style.display = "none";
+        }
+      });
+    };
+
+    // Try to play immediately
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // If autoplay fails, wait for user interaction
+        document.addEventListener("touchstart", handleUserInteraction, {
+          once: true,
+        });
+        document.addEventListener("click", handleUserInteraction, {
+          once: true,
+        });
+      });
+    }
+
+    return () => {
+      document.removeEventListener("touchstart", handleUserInteraction);
+      document.removeEventListener("click", handleUserInteraction);
+    };
+  }, []);
+
   return (
     <div className="relative h-screen w-full bg-slate-900 overflow-hidden">
-      {/* Video background */}
+      {/* Video background - now enabled for mobile */}
       <video
-        src="https://storage.googleapis.com/landingpage_storage/StormSense_App_Preview_Video_Full.mp4"
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
           position: "absolute",
@@ -28,12 +66,40 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
         }}
         onError={(e) => {
           console.error("Video failed to load:", e);
-          // Hide video element if it fails to load
           e.currentTarget.style.display = "none";
+          const fallback =
+            e.currentTarget.parentElement?.querySelector(".video-fallback");
+          if (fallback) {
+            (fallback as HTMLElement).style.display = "block";
+          }
         }}
-        onLoadStart={() => console.log("Video loading started")}
-        onCanPlay={() => console.log("Video can play")}
-        onPlay={() => console.log("Video started playing")}
+        onLoadedData={() => {
+          console.log("Video data loaded");
+        }}
+        onPlay={() => {
+          console.log("Video started playing");
+          // Hide fallback when video plays
+          const fallback =
+            videoRef.current?.parentElement?.querySelector(".video-fallback");
+          if (fallback) {
+            (fallback as HTMLElement).style.display = "none";
+          }
+        }}
+      >
+        <source
+          src="https://storage.googleapis.com/landingpage_storage/StormSense_App_Preview_Video_Full.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Fallback background if video fails */}
+      <div
+        className="video-fallback absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat hidden"
+        style={{
+          backgroundImage:
+            "url('https://storage.googleapis.com/landingpage_storage/Gemini_Generated_Image_ghcreaghcreaghcr.jpeg')",
+        }}
       />
 
       {/* Dark overlay for better text readability */}
