@@ -9,11 +9,12 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video) {
+      return;
+    }
 
     const handleUserInteraction = () => {
-      video.play().catch((err) => {
-        console.log("Video play failed:", err);
+      video.play().catch(() => {
         // Show fallback on play failure
         const fallback = video.parentElement?.querySelector(".video-fallback");
         if (fallback) {
@@ -65,7 +66,6 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
           objectFit: "cover",
         }}
         onError={(e) => {
-          console.error("Video failed to load:", e);
           e.currentTarget.style.display = "none";
           const fallback =
             e.currentTarget.parentElement?.querySelector(".video-fallback");
@@ -73,11 +73,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
             (fallback as HTMLElement).style.display = "block";
           }
         }}
-        onLoadedData={() => {
-          console.log("Video data loaded");
-        }}
         onPlay={() => {
-          console.log("Video started playing");
           // Hide fallback when video plays
           const fallback =
             videoRef.current?.parentElement?.querySelector(".video-fallback");
@@ -87,7 +83,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
         }}
       >
         <source
-          src="https://storage.googleapis.com/landingpage_storage/StormSense_App_Preview_Video_Full.mp4"
+          src="https://storage.googleapis.com/landingpage_storage/mobile_landing_page_background.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
