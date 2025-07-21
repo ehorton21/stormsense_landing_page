@@ -53,7 +53,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
           position: "absolute",
@@ -113,6 +113,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
                 width="48"
                 height="48"
                 className="rounded-lg lg:w-16 lg:h-16"
+                loading="eager"
               />
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight">
                 Storm<span className="text-blue-400">Sense</span>
@@ -137,7 +138,12 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
             <div className="flex sm:hidden flex-row gap-2 justify-center items-center">
               <button
                 className="bg-black hover:bg-gray-800 text-white px-2 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors duration-200 shadow-lg flex-1 max-w-[140px]"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/us/app/stormsense/id6746872117",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
                   <svg viewBox="0 0 24 24" className="w-3 h-3 fill-current">
@@ -153,7 +159,12 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
 
               <button
                 className="bg-black hover:bg-gray-800 text-white px-2 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors duration-200 shadow-lg flex-1 max-w-[140px]"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.excarta.stormsense&hl=en_US",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
                   <svg viewBox="0 0 24 24" className="w-3 h-3 fill-current">
@@ -190,7 +201,12 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
             <div className="hidden sm:flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <button
                 className="bg-black hover:bg-gray-800 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-3 transition-colors duration-200 shadow-lg w-48 sm:w-auto"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/us/app/stormsense/id6746872117",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -209,7 +225,12 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
 
               <button
                 className="bg-black hover:bg-gray-800 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-3 transition-colors duration-200 shadow-lg w-48 sm:w-auto"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.excarta.stormsense&hl=en_US",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -255,6 +276,7 @@ const HeroSection = ({ onScrollToDownload = () => {} }: HeroSectionProps) => {
               src="https://storage.googleapis.com/landingpage_storage/StormSense%20Landing%20Page%20Screenshots.png"
               alt="StormSense App Screenshots"
               className="w-full max-w-sm lg:max-w-none lg:w-full lg:h-full object-contain lg:object-cover"
+              loading="eager"
             />
           </div>
         </div>

@@ -152,6 +152,7 @@ const FeatureShowcase = ({ features = [] }: FeatureShowcaseProps) => {
                   }
                   alt={`${feature.title} Preview`}
                   className="absolute inset-0 w-full h-full object-contain"
+                  loading="lazy"
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity: hoveredFeature === index ? 1 : 0,
@@ -242,6 +243,7 @@ const FeatureShowcase = ({ features = [] }: FeatureShowcaseProps) => {
                       }
                       alt={`${feature.title} Preview`}
                       className="w-full h-96 object-contain max-w-sm"
+                      loading="lazy"
                       onError={(e) => {
                         console.error(
                           `Failed to load image: ${feature.imageUrl}`,

@@ -27,6 +27,7 @@ const AppDownloadSection = ({ id = "download" }: AppDownloadSectionProps) => {
                 src="https://storage.googleapis.com/landingpage_storage/StormSense_Country_View.png"
                 alt="StormSense App on Phone"
                 className="rounded-2xl shadow-2xl max-w-md lg:max-w-lg"
+                loading="lazy"
               />
             </div>
           </motion.div>
@@ -51,7 +52,12 @@ const AppDownloadSection = ({ id = "download" }: AppDownloadSectionProps) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <button
                 className="bg-black hover:bg-gray-800 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-3 transition-colors duration-200 shadow-lg w-48 sm:w-auto"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/us/app/stormsense/id6746872117",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -70,7 +76,12 @@ const AppDownloadSection = ({ id = "download" }: AppDownloadSectionProps) => {
 
               <button
                 className="bg-black hover:bg-gray-800 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-3 transition-colors duration-200 shadow-lg w-48 sm:w-auto"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.excarta.stormsense&hl=en_US",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">

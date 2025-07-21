@@ -18,7 +18,7 @@ const Footer = ({
     facebook: "https://www.facebook.com/profile.php?id=61577810401041",
   },
   contactInfo = {
-    email: "contact@excarta.com",
+    email: "contact@stormsense.ai",
   },
   copyrightYear = new Date().getFullYear(),
 }: FooterProps) => {
@@ -94,7 +94,12 @@ const Footer = ({
             <div className="flex flex-col sm:flex-row gap-2">
               <button
                 className="bg-black hover:bg-gray-800 text-white px-3 py-2 rounded-lg flex items-center gap-2 transition-colors duration-200 shadow-lg text-xs"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/us/app/stormsense/id6746872117",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-4 h-4 flex items-center justify-center">
                   <svg viewBox="0 0 24 24" className="w-3 h-3 fill-current">
@@ -110,7 +115,12 @@ const Footer = ({
 
               <button
                 className="bg-black hover:bg-gray-800 text-white px-3 py-2 rounded-lg flex items-center gap-2 transition-colors duration-200 shadow-lg text-xs"
-                onClick={() => alert("Coming Soon")}
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.excarta.stormsense&hl=en_US",
+                    "_blank",
+                  )
+                }
               >
                 <div className="w-4 h-4 flex items-center justify-center">
                   <svg viewBox="0 0 24 24" className="w-3 h-3 fill-current">
